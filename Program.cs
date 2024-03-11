@@ -1,21 +1,17 @@
-﻿﻿string[] OneArray = FirstArray();
-string[] TwoArray = SecondArray(OneArray);
-string ThreeArray = MiddleArray(OneArray)
-string FourArray = MiddleArray(TwoArray);
 ﻿string[] OneArray = FirstArray();
 string[] TwoArray = SecondArray(OneArray);
 string ThreeArray = MiddleArray(OneArray);
-string FourArray = MiddleArray(TwoArray)
+string FourArray = MiddleArray(TwoArray);
 Console.WriteLine(ThreeArray + " -> " + FourArray);
 
 string[] FirstArray()
 {
-    Console.WriteLine("Введите количество элементов массива:")
+    Console.WriteLine("Введите количество элементов массива:");
     string? enterSymbols = Console.ReadLine();
     if (enterSymbols == null) { enterSymbols = ""; };
     char[] separators = new char[] { ',', ' ' };
-    string[] workArray = enterSymbols.Split(separators, StringSplitOptions.RemoveEmptyEntries)
-    return workArray
+    string[] workArray = enterSymbols.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+    return workArray;
 }
 
 string MiddleArray(string[] OneArray)
@@ -25,7 +21,7 @@ string MiddleArray(string[] OneArray)
     {
         if (i == OneArray.Length - 1)
         {
-            stringArray += $"\"{OneArray[i]}\""
+            stringArray += $"\"{OneArray[i]}\"";
             break;
         }
         stringArray += ($"\"{OneArray[i]}\", ");
@@ -41,7 +37,7 @@ int Symbols(string[] OneArray)
     {
         if (item.Length <= 3)
         {
-            counter++
+            counter++;
         }
     }
     return counter;
@@ -60,5 +56,5 @@ string[] SecondArray(string[] workArray)
             i++;
         }
     }
-    return resultArray
+    return resultArray;
 }
